@@ -5,7 +5,8 @@
     <t t-name="owl_playground.playground" owl="1">
     <div style="position:relative;">
         <Counter/>
-        <div style="position:absolute;top:50%;left:50%" ><Todolist/></div>
+        <div style="position:absolute;top:50%;left:50%;" ><Todolist/></div>
+        <!-- <Todolist/> -->
         
         </div>
         <!-- <Card>

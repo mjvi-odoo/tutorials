@@ -10,10 +10,10 @@ export class Todolist extends Component {
     static template = "owl_playground.todolist";
 
     setup() {
-        this.todoList = [];
+        // this.todoList = [];
         this.todoList = useState([{ id: 1, description: "Task 1", done: false },{ id: 2, description: "Task 2", done: false },{ id: 3, description: "Task 3", done: false }]);
         this.nextId = this.todoList.length+1;
-        this.inputred = useAutofocus("inputElement");
+        // this.inputred = useAutofocus("inputElement");
     }
 
     addTodo(ev) {
@@ -26,13 +26,16 @@ export class Todolist extends Component {
     }
 
     toggleState(todoId) {
+        console.log(todoId)
 
         const todo = this.todoList.find((todo) => todo.id === todoId);
         if (todo) {
+            console.log(todo.id)
             todo.done = !todo.done;
         }
     }
     removeTodo(todoId) {
+        
         const index = this.todoList.findIndex((todo) => todo.id === todoId);
         if (index >= 0) {
             this.todoList.splice(index, 1);
