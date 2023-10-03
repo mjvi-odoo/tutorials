@@ -9,10 +9,9 @@
         <!-- <Todolist/> -->
         
         </div>
-        <!-- <Card>
-            <t t-set-slot="title">Card title</t>
-            <p class="card-text">Some quick example text...</p>
-            <a href="https://www.odoo.com/" class="btn btn-primary">Go somewhere</a>
-        </Card> -->
+        <Card>
+            <t t-set-slot="title">Mahediali</t>
+            <p class="card-text">Hello welcome</p>
+        </Card>
     </t>
 </templates>
