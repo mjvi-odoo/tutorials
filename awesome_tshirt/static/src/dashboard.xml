@@ -3,7 +3,7 @@
     <t t-name="awesome_tshirt.clientaction" owl="1">
         <Layout display="display">
             <t t-set-slot="control-panel-bottom-left">
-                <!-- Hello owl -->
+
                 <button class="btn btn-primary" t-on-click="openCustomerView"> Customers </button>
                 <button class="btn btn-primary" t-on-click="openLast7DaysOrders"> New Orders </button>
                 <button class="btn btn-primary" t-on-click="openLast7DaysCancelledOrders"> Cancelled Orders </button>
@@ -18,6 +18,12 @@
                         <p class="card-text"><t t-esc="statistics[key]"/></p>
                     </Card>   
                 </div>      
+            </div>
+            <div class="m-3">
+                <Card className="'w-25'">
+                    <t t-set-slot="title">Shirt orders by size</t>
+                    <PieChart data="statistics['orders_by_size']" label="'Shirt orders by size'"/>
+                </Card>
             </div>
         </t>
     </t>
